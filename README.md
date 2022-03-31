@@ -6,7 +6,7 @@ The App contains two screens, the search screen, the users list screen
 
 
 ## Features 
-* Great User interface
+* Simple User interface
 * Nice Interactive Cell Click Animation
 
 ## iOS Tech Stack
