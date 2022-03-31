@@ -100,6 +100,12 @@ class PaginationClass<Element>{
     }
     
     public func setUpInit(list_of items: [Element], useDataAction: @escaping () -> ()){
+        guard items.count > number_of_elements_per_page else {
+            newCurrentAddition = items
+            databank = items
+            useDataAction()
+            return
+        }
         let items = builddict(from: items)
         max_item = items.count
         dict = items
