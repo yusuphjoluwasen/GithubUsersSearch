@@ -32,7 +32,7 @@ extension SearchViewController{
     }
     
     func fetchUser(){
-        searchViewModel.fetchUser(query: searchValue)
+        validateOrFetch()
     }
     
     func moveToUserView(users:[User]){
@@ -42,5 +42,13 @@ extension SearchViewController{
     func getFetched(users list: [User]){
         UserViewModel.sharedViewModel.usersFromSource = list
         UserViewModel.sharedViewModel.getUserData.onNext("")
+    }
+    
+    func validateOrFetch(){
+        if searchValue.isEmpty{
+            showError(errorMessage: StringConstants.validatefield)
+        }else{
+            searchViewModel.fetchUser(query: searchValue)
+        }
     }
 }

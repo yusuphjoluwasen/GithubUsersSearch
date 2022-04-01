@@ -15,4 +15,5 @@ enum StringConstants {
     static let genre = "Genre"
     static let synopsis = "Synopsis"
     static let apikey = "21723443dbd6dd0eab86c39695b6a0a4"
+    static let validatefield = "field should not be empty"
 }
