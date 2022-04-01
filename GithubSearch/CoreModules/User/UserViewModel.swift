@@ -15,6 +15,7 @@ class UserViewModel: BaseViewModel {
     let usePagination = UsePagination<UserDto>(no_of_elements: 10)
     var usersFromSource:[User] = []{
         didSet{
+            print("aaaa",usersFromSource.count)
             paginateUsers()
         }
     }

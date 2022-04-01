@@ -58,7 +58,7 @@ public struct NetworkingRX {
                     observer.onNext(.error(nil))
                     return
                 }
-                print("✅  Response: \(urlString ?? "") \n \(decoded)\n")
+//                print("✅  Response: \(urlString ?? "") \n \(decoded)\n")
                 observer.onNext(.success(decoded))
             }
             urlSession.resume()

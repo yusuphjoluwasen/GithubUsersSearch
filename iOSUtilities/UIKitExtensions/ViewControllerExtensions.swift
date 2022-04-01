@@ -5,7 +5,6 @@
 //  Created by Guru on 29/03/2022.
 //
 import UIKit
-import RxSwift
 
 extension UIViewController{
     

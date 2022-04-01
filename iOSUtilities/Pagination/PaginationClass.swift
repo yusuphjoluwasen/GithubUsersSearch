@@ -22,6 +22,11 @@ class PaginationClass<Element>{
     public var databank:[Element] = []
     public var newCurrentAddition:[Element] = []
     
+    private func cleanDataBank(){
+        databank = []
+        newCurrentAddition = []
+    }
+    
     private func buildDictionaryFromList(list:[Element]) -> [Int:[Element]]{
         var emptyDictionary =  [Int: [Element]]()
         var increment = 0
@@ -66,7 +71,6 @@ class PaginationClass<Element>{
     
     private func addToDataBank(){
         current_index += 1
-        print("cuureent index\(current_index)")
         addBasedOnIndex(index: current_index)
     }
     
@@ -100,12 +104,14 @@ class PaginationClass<Element>{
     }
     
     public func setUpInit(list_of items: [Element], useDataAction: @escaping () -> ()){
+        cleanDataBank()
         guard items.count > number_of_elements_per_page else {
             newCurrentAddition = items
             databank = items
             useDataAction()
             return
         }
+       
         let items = builddict(from: items)
         max_item = items.count
         dict = items

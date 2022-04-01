@@ -28,7 +28,7 @@ extension SearchViewController{
     }
     
     func updateSearchValue(){
-        searchValue = contentView.searchTextField.text ?? ""
+        searchValue =  contentView.searchTextField.text.orEmpty()
     }
     
     func fetchUser(){

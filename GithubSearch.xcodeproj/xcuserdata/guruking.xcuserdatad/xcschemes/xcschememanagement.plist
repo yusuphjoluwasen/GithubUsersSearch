@@ -7,7 +7,7 @@
 		<key>GithubSearch.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>0</integer>
 		</dict>
 		<key>Network.xcscheme_^#shared#^_</key>
 		<dict>
@@ -106,7 +106,7 @@
 		<key>iOSUtilities.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 	</dict>
 </dict>
