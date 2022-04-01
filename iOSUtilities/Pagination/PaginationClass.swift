@@ -25,6 +25,9 @@ class PaginationClass<Element>{
     private func cleanDataBank(){
         databank = []
         newCurrentAddition = []
+        max_item = 0
+        current_index = 0
+        dict = [:]
     }
     
     private func buildDictionaryFromList(list:[Element]) -> [Int:[Element]]{
@@ -94,6 +97,8 @@ class PaginationClass<Element>{
 
     //Method To be exposed
     public func addMoreDataAndScrollDown(){
+        print(current_index)
+        print(max_item)
         if current_index < max_item - 1{
             addToDataBank()
         }
